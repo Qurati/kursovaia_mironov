@@ -1,6 +1,3 @@
-
-CREATE DATABASE gas_pipeline_db;
-
 CREATE TABLE pipe_classes (
     pipe_class_id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,

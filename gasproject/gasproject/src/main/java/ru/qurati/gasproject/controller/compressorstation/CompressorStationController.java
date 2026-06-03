@@ -83,7 +83,7 @@ public class CompressorStationController {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Подтверждение удаления");
             alert.setHeaderText("Удаление записи");
-            alert.setContentText("Вы действительно хотите удалить станцию \"" + currentItem.getName() + "\"?\n\nВНИМАНИЕ: Будут удалены все связанные сегменты и замеры!");
+            alert.setContentText("Вы действительно хотите удалить станцию \"" + currentItem.getName() + "\"?\n\nВНИМАНИЕ: Будут удалены все связанные замеры!");
             Optional<ButtonType> result = alert.showAndWait();
             if (result.isPresent() && result.get() == ButtonType.OK) {
                 new CompressorStationService().delete(currentItem.getStation());
